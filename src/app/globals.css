@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Fixate dark theme — palette: bg #0d1117 · card #161b22 · ice #a5d6ff */
+:root {
+  --background: #0d1117;
+  --foreground: #e6edf3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-dm-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Font-family helpers — loaded via next/font in layout.tsx */
+.font-sora {
+  font-family: var(--font-sora), 'Sora', sans-serif;
+}
+.font-dm-mono {
+  font-family: var(--font-dm-mono), 'DM Mono', monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
