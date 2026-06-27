@@ -5,7 +5,7 @@ import { createServiceClient } from '@/lib/supabaseClient'
 import { getFallbackNudge } from '@/lib/fallbackNudges'
 import type { IngestWindowBody } from '@/lib/types'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
 
 function nudgeTypeFromScore(score: number): 'mild' | 'moderate' | 'urgent' {
   if (score > 75) return 'urgent'

@@ -3,7 +3,7 @@ import { auth0 } from '@/lib/auth0'
 import { createServiceClient } from '@/lib/supabaseClient'
 import type { EndSessionBody } from '@/lib/types'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
 
 // POST — called when a tracking session stops. Upserts the session row with the
 // aggregates the client computed from this run's windows.
